@@ -71,8 +71,6 @@ public class InventoryClickListener implements Listener {
             boolean neededStack = true;
             int currentSlot = player.getInventory().firstEmpty();
 
-            player.playSound(player.getLocation(), Sound.CLICK, 1, 1);
-
             for (int i = 0; i < player.getInventory().getSize(); i++) {
                 ItemStack currentItem = player.getInventory().getItem(i);
 
@@ -84,6 +82,8 @@ public class InventoryClickListener implements Listener {
                     currentSlot = i;
                 }
             }
+
+            player.playSound(player.getLocation(), Sound.ITEM_PICKUP, 1, 1);
 
             if (neededStack) {
                 player.getInventory().setItem(player.getInventory().firstEmpty(), itemStack);
@@ -125,7 +125,7 @@ public class InventoryClickListener implements Listener {
             if (player.getInventory().getItem(i) == null) continue;
 
             if (player.getInventory().getItem(i).getType() == itemStack.getType()) {
-                if (itemStack.getMaxStackSize() - player.getInventory().getItem(i).getAmount() >= itemStack.getAmount())
+                if (itemStack.getMaxStackSize() - player.getInventory().getItem(i).getAmount() < itemStack.getAmount()) continue;
                     currentAmount = player.getInventory().getItem(i).getAmount();
                 break;
             }
