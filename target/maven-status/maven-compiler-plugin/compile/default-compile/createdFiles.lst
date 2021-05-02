@@ -1,0 +1,9 @@
+de\lecuutex\bedwars\Bedwars.class
+de\lecuutex\bedwars\utils\ItemBuilder.class
+de\lecuutex\bedwars\commands\ShopCommand.class
+de\lecuutex\bedwars\listener\PlayerItemConsumeListener.class
+de\lecuutex\bedwars\listener\InventoryClickListener.class
+de\lecuutex\bedwars\utils\ItemsEnum.class
+de\lecuutex\bedwars\utils\InventoryHandler.class
+de\lecuutex\bedwars\utils\CategoryEnum.class
+de\lecuutex\bedwars\utils\PriceEnum.class

@@ -1,0 +1,6 @@
+main: de.lecuutex.bedwars.Bedwars
+name: Bedwars
+version: 1.0
+author: leCuutex
+commands:
+  shop:
