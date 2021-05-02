@@ -17,7 +17,7 @@ public class InventoryClickListener implements Listener {
     @EventHandler
     public void onClick(InventoryClickEvent event) {
 
-        Inventory inventory = event.getClickedInventory();
+        Inventory inventory = event.getClickedInventory(); //Test
         ItemStack item = event.getCurrentItem();
         int slot = event.getRawSlot();
         Player player = (Player) event.getWhoClicked();
